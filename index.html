@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="zh_CN" ng-app='app' ng-controller='mainCtrl'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./boorstrap-4.0/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./boorstrap-4.0/fonts/boostrapicons/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title></title>
+
+    <script src="./boorstrap-4.0/js/plugins/bootstrap/jquery.slim.min.js"></script>
+    <script src="./js/libs/angular.js"></script>
+
+    <script src="./js/apps/basic.js"></script>
+    <script src="./js/apps/index/index.js"></script>
+    <script src="./js/apps/index/shopCtrl.js"></script>
+    <script src="./js/apps/login.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+
+        <section class="register">
+            <div class="modal fade" id="register_modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="logo">
+                                <img src="./img/logo.png" alt="">
+                            </div>
+                            <h5 class="modal-title" id="staticBackdropLabel">免费注册</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form class="mx-auto my-4" style="width: 80%;">
+                                <div class="form-group ">
+                                    <input type="email" class="form-control" placeholder="用户名称/手机"
+                                        aria-describedby="emailHelp">
+                                    <small class="form-text text-danger"><span></span>该账号已被注册</small>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="密码">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="重复密码">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control " placeholder="验证码">
+                                    <button type="button" class="btn btn-info">获取验证码</button>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" style="top:3px;">
+                                    <label class="form-check-label text-secondary" style="font-size:16px;"
+                                        for="exampleCheck1">同意《简易购用户协议》</label>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">完成注册</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="login">
+            <div class="modal fade" id="login_modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="logo">
+                                <img src="./img/logo.png" alt="">
+                            </div>
+                            <h5 class="modal-title" id="staticBackdropLabel">登录界面</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">用户名:</label>
+                                    <input type="email" class="form-control" placeholder="用户名称/手机"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">密码:</label>
+                                    <input type="password" class="form-control" placeholder="密码">
+                                </div>
+
+                                <div class="login_message">
+                                    <small class="form-text  text-danger"><span></span>您输入的密码错误</small>
+                                    <small class="form-text  text-danger"><span></span>此账号尚未注册，请先免费注册</small>
+                                    <small class="form-text  text-danger"><span></span>账号或密码不可为空</small>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary login_enter">立即登录</button>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+                                data-target="#register_modal">免费注册</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="login_enter_modal">
+            <div class="modal fade" id="login_enter_modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">账号登录成功</h5>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <a href="javascript:;" class="btn btn-primary" data-dismiss="modal">确认</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="login_exit_modal">
+            <div class="modal fade" id="login_exit_modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">是否退出当前账号</h5>
+                        </div>
+                        <div class="modal-body">
+                            倘若退出账号需要重新登录
+                            <br>
+                            否则部分功能无法使用哦|･ω･｀)
+                        </div>
+                        <div class="modal-footer">
+                            <a href="javascript:;" class="btn btn-danger login_exit_buton" data-dismiss="modal">肯定退出</a>
+                            <a href="javascript:;" class="btn btn-primary" data-dismiss="modal">否定退出</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="./index.html">简易购欢迎您！</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="login_state navbar-nav mr-auto">
+                            <li class="noLogin nav-item active" data-toggle="modal" data-target="#login_modal">
+                                <a class="nav-link" href="javascript:;">请登录<span class="sr-only"></span></a>
+                            </li>
+                            <li class="noLogin nav-item" data-toggle="modal" data-target="#register_modal">
+                                <a class="nav-link" href="javascript:;">免费注册</a>
+                            </li>
+                            <li class="hasLogin user_head nav-item" data-toggle="modal" data-target="#login_exit_modal">
+                                <i class="bi bi-person-circle"></i>
+                            </li>
+                            <li class="hasLogin user_name nav_item" data-toggle="modal" data-target="#login_exit_modal">
+                                <a class="nav-link active" href="javascript:;">user_name</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./order_management.html">我的订单<span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./order_management.html">我的简易购<span
+                                        class="sr-only"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="link"></div>
+
+        <section class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="logo col-2"><img src="./img/logo.png" alt=""></div>
+                    <div class="search col-7">
+                        <div class="input-group ml-4">
+                            <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <a href="./search.html" target="_blank">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        id="button-addon2">搜索</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shopping_car col-3">
+                        <a href="./shopping_car.html">
+                            <button type="button" class="btn btn-light ml-2">
+                                <i class="bi bi-cart4"></i>
+
+                                <span>我的购物车</span>
+
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./search.html">商品分类</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./search.html" target="_blank">手机数码</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./search.html" target="_blank">电脑办公</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="body">
+        <div class="container">
+            <div class="row">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="./search.html" target="_blank">
+                                <img src="./img/banner1.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./search.html" target="_blank">
+                                <img src="./img/banner2.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./search.html" target="_blank">
+                                <img src="./img/banner3.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./search.html" target="_blank">
+                                <img src="./img/banner4.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="list row" ng-controller='shopCtrl'>
+                <div class="title col-2">
+                    <!-- <img src="./img/new_shopping.png" alt=""> -->
+                </div>
+                <div class="item col-10">
+                    <div class="container">
+                        <div class="row justify-content-strat">
+
+
+
+                            <div class="col-3" ng-repeat="shopShowData in shopShowDatas">
+                                <a href="./details.html" target="_blank">
+                                    <div class="card" data-shopid={{shopShowData.id}}>
+                                        <img ng-src={{imgAddress(shopShowData.src)}} class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <p class="card-title one">{{shopShowData.name}}</p>
+                                            <p class="card-text">￥{{shopShowData.price}}</p>
+                                            <div class="button">
+                                                <div class="noCar card-button" ng-hide='{{shopShowData.inCar}}'
+                                                    ng-click='addCar()'>
+                                                    <a href="javascript:;" class="btn btn-light">
+                                                        <i class="bi bi-cart4" style="font-size: 20px;"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="inCar card-button" ng-show='{{shopShowData.inCar}}'
+                                                    ng-click="addCar()">
+                                                    <a href=" javascript:;" class="btn btn-light">
+                                                        <i class="bi bi-check" style="font-size: 30px;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>@HUNAU-SYB</footer>
+
+    <script>
+        //商品库函数
+        function getShopData() {
+            var data = localStorage.getItem('shop_info');
+            if (data != null) {
+                return JSON.parse(data);
+            } else {
+                var
+                    local = [{
+                        id: 0, src: 'shuma1.jpg',
+                        name: '惠威HiVi AW-73真无线蓝牙耳机 迷你隐形运动入耳式耳机 苹果华为小米安卓手机通用耳麦 黑色',
+                        price: '499.00', inCar: 0
+                    }, {
+                        id: 1, src: 'shuma2.jpg',
+                        name: '佳能（Canon）EOS R5 8K微单相机 微单机身 旗舰型全画幅专业微单 配合镜头实现双重 8级防抖 动物检测',
+                        price: '27499.00', inCar: 0
+                    }, {
+                        id: 2, src: 'shuma3.jpg',
+                        name: '索爱（soaiy）S99 蓝牙音箱电脑音响 智能户外低音炮 闹钟收音机插卡便携式广场舞扩音器 黑',
+                        price: '399.00', inCar: 0
+                    }, {
+                        id: 3, src: 'shuma4.jpg',
+                        name: '图马思特（THRUSTMASTER）TCA空客版飞行摇杆 霍尔磁感应摇杆 airbus空客A320 飞行模拟器',
+                        price: '599.00', inCar: 0
+                    }, {
+                        id: 4, src: 'shouji1.jpg',
+                        name: '荣耀30 50倍远摄 麒麟985 5G 4000万超广角AI四摄 3200W美颜自拍 全网通版8GB+128GB 幻夜黑 全面屏手机'
+                        , price: '3088.00', inCar: 0
+                    }, {
+                        id: 5, src: 'shouji2.jpg',
+                        name: 'ROG游戏手机3精英版 12GB+128GB 黑 骁龙865 144Hz电竞屏 6000mAh电池 全网通5G手机 ROG3',
+                        price: '3999.00', inCar: 0
+                    }, {
+                        id: 6, src: 'shouji3.jpg',
+                        name: '努比亚 nubia 红魔5G 电竞游戏手机 8GB+128GB 骇客黑 骁龙865 144Hz屏幕刷新率 内置风扇散热',
+                        price: '3799.00', inCar: 0
+                    }, {
+                        id: 7, src: 'shouji4.jpg',
+                        name: '三星 SAMSUNG 心系天下W21 5G（SM-W2021）折叠屏 骁龙865+ 5G手机 12GB+512GB 熠辉金',
+                        price: '19999.00', inCar: 0
+                    }, {
+                        id: 8, src: 'diannao1.jpg',
+                        name: '卡森睿苹果MACPRO AIR A1502 A1398 A1466 A1465笔记本SSD固态硬盘 副厂硬盘 512G预装双系统'
+                        , price: '999.00', inCar: 0
+                    }, {
+                        id: 9, src: 'diannao2.jpg',
+                        name: '讯景（XFX）RX6900XT显卡+AMD锐龙9 5900X处理器+华擎雷蛇定制X570主版3A套装',
+                        price: '16999.00', inCar: 0
+                    }, {
+                        id: 10, src: 'diannao3.jpg',
+                        name: '武极 i5 10400F/10600KF/GTX1050Ti/240G游戏台式电脑主机DIY组装机',
+                        price: '3297.00', inCar: 0
+                    }, {
+                        id: 11, src: 'diannao4.jpg',
+                        name: '飞利浦猛腾 55英寸显示器4K 120Hz HDR1000 流光溢彩AI灯效 3080好机友 游戏主机电脑显示器 558M1RY'
+                        , price: '10999.00', inCar: 0
+                    }, {
+                        id: 12, src: 'diannao5.jpg',
+                        name: '武极 新i7 10700K/RTX 2060S/16G/游戏台式吃鸡电脑主机组装', price: '8798.00',
+                        inCar: 0
+                    }, {
+                        id: 13, src: 'diannao6.jpg',
+                        name: '华硕（ASUS）ROG一体240/360水冷台式机散热器 RGB神光同步灯效（静音/360mm冷排） 华硕 ROG 龙神360水冷/猫头鹰风扇'
+                        , price: '1999.00', inCar: 0
+                    }, {
+                        id: 14, src: 'diannao7.jpg',
+                        name: 'AMD 锐龙 3500X 3600 3700X 5800X 台式机 CPU 处理器 R9 5950X 盒装CPU',
+                        price: '7899.00', inCar: 0
+                    }, {
+                        id: 15, src: 'diannao8.jpg',
+                        name: '金士顿（Kingston）A400 240gSATA笔记本台式机固态硬盘SSD 240G', price: '249.00',
+                        inCar: 0
+                    }]
+                saveShopData(local);
+                return local;
+            }
+        };
+
+        function saveShopData(local) {
+            localStorage.setItem('shop_info', JSON.stringify(local));
+        };
+
+        function checkShopData(id) {
+            var data = getShopData();
+            console.log(id);
+            console.log(data);
+            var number = -1;
+            $.each(data, function (i, n) {
+                if (n.id == id) {
+                    // console.log('到前面这里啦！此时i为' + i);
+                    number = i;
+                    // console.log('到后面这里啦！');
+                    return false;
+                }
+            });
+            // console.log('居然到这了？')
+            return number;
+        }
+
+
+
+        //购物车函数
+        function getCarData() {
+            var data = localStorage.getItem('car_info'); if
+                (data != null) { return JSON.parse(data); } else { return []; }
+        }
+        function saveCarData(local) {
+            localStorage.setItem('car_info',
+                JSON.stringify(local));
+        }
+
+        function checkCarData(id) {
+            var data = getCarData();
+            var number = -1;
+            $.each(data, function (i, n) {
+                if (n.id == id) {
+                    number = i;
+                    return false;
+                }
+            });
+            return number;
+        } 
+    </script>
+
+
+
+
+
+
+    <script src="./boorstrap-4.0/js/plugins/bootstrap/popper.min.js"></script>
+    <script src="./boorstrap-4.0/js/plugins/bootstrap/bootstrap.min.js"></script>
+</body>
+
+</html>

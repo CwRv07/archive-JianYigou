@@ -1,0 +1,282 @@
+/* body */
+.body{
+    margin-top: 40px;
+}
+
+
+/* table */
+
+/* .body table thead{
+    margin-bottom: 20px;
+} */
+
+
+
+.shoppingCar_body{
+    border: 1px solid rgb(227,227,227);
+    width: 100%;
+    /* margin-left: 10px; */
+}
+
+.shoppingCar_body thead{
+    background: #605f5f;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+.shoppingCar_body thead td{
+    height: 45px;
+    line-height: 45px;
+    background: #605f5f;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+}
+.shoppingCar_body thead td:nth-child(1){
+    width: 60px;
+}
+.shoppingCar_body thead td:nth-child(2){
+    width: 360px;
+}
+.shoppingCar_body thead td:nth-child(3){
+    width: 100px;
+}
+.shoppingCar_body thead td:nth-child(4){
+    width: 130px;
+}
+.shoppingCar_body thead td:nth-child(5){
+    width: 130px;
+}
+.shoppingCar_body thead td:nth-child(6){
+    width: 50px;
+}
+
+/* .page td{
+    background-color: pink;
+} */
+.page:nth-child(odd){
+    background-color: #fff;
+}
+.page:nth-child(even){
+    background-color: #f2f2f2;
+    /* background-color: rgb(247,247,247); */
+}
+.page td{
+    height: 90px;
+    position: relative;
+}
+
+
+.shoppingCar_body .page td:nth-child(1) div{
+    position: absolute;
+    left: 50%;margin-left: -10px;
+    top: 50%;margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    background:url(../img/danXuanKuang-0.png);
+    background-size: 20px 20px;
+}
+
+
+.shoppingCar_body .page td:nth-child(2) img{
+    float: left;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    background-size: 70px 70px;
+    margin-left: 20px;
+}
+.shoppingCar_body .page td:nth-child(2) div{
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 300px;
+    font-size: 12px;
+    font-weight: 550;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.shoppingCar_body .page td:nth-child(3) p{
+    display: inline-block;
+    margin: 0 auto;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    color: rgb(233,72,38);
+}
+
+
+.shoppingCar_body .page td:nth-child(4) div{
+    position: absolute;
+    left: 50%;margin-left: -51px;
+    top: 50%;margin-top: -15px;
+    width: 103px;
+    height: 33px;
+    text-align: center;
+    border: 1px solid rgb(227,227,227);
+    padding: 0.5px 0;
+}
+.shoppingCar_body .page td:nth-child(4) div a{
+    float: left;
+    width: 25px;
+    height: 30px;
+    cursor: default;
+    background-color: rgb(247,247,247);
+}
+.shoppingCar_body .page td:nth-child(4) div a:first-child{
+    background-image: url(../img/minus.png);
+}
+.not_allowed:hover{
+    cursor: not-allowed!important;
+}
+.shoppingCar_body .page td:nth-child(4) div a:last-child{
+    background-image: url(../img/add.png);
+}
+.shoppingCar_body .page td:nth-child(4) div input{
+    float: left;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+
+.shoppingCar_body .page td:nth-child(5) p{
+    display: inline-block;
+    margin: 0 auto;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    color: rgb(233,72,38);
+}
+
+
+.shoppingCar_body .page td:nth-child(6) a{
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    cursor: default;
+    /* background:url(../img/danXuanKuang-0.png); */
+    /* background-size: 30px 30px; */
+}
+
+
+
+.shoppingCar_footer{
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    position: sticky;
+    z-index: 100;
+    bottom: 4px;
+    background-color: #fff;
+    
+}
+.shoppingCar_bottom{
+    box-sizing: content-box;
+    background-color: rgb(229,229,229);
+    border: 2px solid rgb(238,238,238);
+    height: 50px;
+    /* box-shadow: ; */
+}
+.shoppingCar_bottom div{
+    display: inline-block;
+}
+.shoppingCar_bottom p{
+    display: inline-block;
+}
+
+
+.shoppingCar_bottom .left{
+    float: left;
+    
+}
+.shoppingCar_bottom .selection_all{
+    height: 50px;
+    position: relative;
+    
+}
+.shoppingCar_bottom .selection_all div{
+    position: absolute;
+    left: 26px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background:url(../img/danXuanKuang-0.png);
+    background-size: 20px 20px;
+}
+.shoppingCar_bottom .selection_all span{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 50px 0 50px;
+}
+.shoppingCar_bottom .remove span{
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    /* border: 1px solid rgb(227,227,227); */
+    border-radius: 5px;
+    cursor: default;
+}
+
+
+.shoppingCar_bottom .right{
+    float: right;
+    height: 50px;
+}
+.shoppingCar_bottom .selection_number{
+    margin-right: 30px;
+}
+.shoppingCar_bottom .selection_number span{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+}
+.shoppingCar_bottom .selection_number p{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(255,69,0);
+}
+.shoppingCar_bottom .price_all{
+    margin-right: 30px;
+}
+.shoppingCar_bottom .price_all span{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+}
+.shoppingCar_bottom .price_all p{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(255,69,0);
+    
+}
+
+.shoppingCar_bottom .right button{
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgb(255,69,0);
+    outline: none;
+    border: none;
+    transform: translateY(-1px);
+}
+

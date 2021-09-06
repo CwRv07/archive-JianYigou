@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'icomoon','Microsoft YaHei';
+}
+.modal{
+    padding: 0 !important;
+}
+.modal .modal-dialog{
+    width: 300px;
+}
+.modal .modal-body{
+    padding: 10px 20px;
+}
+
+.one{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.two{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+ul,ol{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+
+@keyframes picture_jump{
+    0%   {transform: translateY(0px) scaleY(1.2) scaleX(1.2);}
+/* 下压 */
+    20%  {transform: translateY(5px) scaleY(0.9) scaleX(1.2);}
+/* 还原 */
+    40%  {transform: translateY(0px) scaleY(1.2) scaleX(1.2);}
+/* 跳起 */
+    55% {transform: translateY(-15px) scaleY(1.4) scaleX(1.2);}
+    65% {transform: translateY(-15px) scaleY(1.4) scaleX(1.2);}
+/* 还原 */
+    85%  {transform: translateY(0px) scaleY(1.2) scaleX(1.2);}
+    100% {transform: translateY(0px) scaleY(1.2) scaleX(1.2);}
+}
+@keyframes button_jump{
+    0%   {transform: translateY(0px) scaleY(1) scaleX(1);}
+/* 下压 */
+    20%  {transform: translateY(5px) scaleY(0.7) scaleX(1);}
+/* 还原 */
+    40%  {transform: translateY(0px) scaleY(1) scaleX(1);}
+/* 跳起 */
+    55% {transform: translateY(-15px) scaleY(1.2) scaleX(1);}
+    65% {transform: translateY(-15px) scaleY(1.2) scaleX(1);}
+/* 还原 */
+    85%  {transform: translateY(0px) scaleY(1) scaleX(1);}
+    100% {transform: translateY(0px) scaleY(1) scaleX(1);}
+}
+.jump_button{
+    animation: button_jump 0.7s linear 0s  infinite;
+}
+
+/* header */
+
+/* nav */
+header>.link{
+    border-bottom: 2px solid #989898;
+}
+header nav{
+    width: 100%;
+}
+
+/* title */
+header .title{
+    margin-top: 30px;
+}
+
+header .title .row:nth-child(1) .logo{
+    padding: 0;
+    transform: translateY(-5px);
+}
+header .title .row:nth-child(1) .logo img{
+    display: block;
+    height: calc(1.5em + .75rem + 10px);
+}
+
+header .title .row:nth-child(1) .search{
+    padding: 0;
+    text-align: center;
+}
+header .title .row:nth-child(1) .search .input-group{
+    width: 90%!important;
+    position: relative;
+}
+header .title .row:nth-child(1) .search input{
+    border: 1px solid #ff0000;
+    border-radius: 0;
+    padding-right: 130px;
+}
+header .title .row:nth-child(1) .search button{
+    position: absolute;
+    right: -2px;
+    border: 1px solid #ff0000;
+    background-color: #ff0000;
+    border-radius: 0;
+    width: 120px;
+    z-index: 10;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+header .title .row:nth-child(1) .shopping_car{
+    padding-right: 0;
+    text-align: center;
+}
+header .title .row:nth-child(1) .shopping_car button{
+    height: calc(1.5em + .75rem + 10px);
+    font-size: 14px;
+    font-weight: 550;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 0;
+    /* line-height: ; */
+}
+header .title .row:nth-child(1) .shopping_car i::before{
+    font-weight: 550!important;
+}
+
+
+
+header .title .row:nth-child(2){
+    margin-top: 20px;
+}
+header .title .row:nth-child(2)>.nav{
+    width: 100%;
+    border-bottom: 2px solid #999999;
+}
+header .title .row:nth-child(2)>.nav .nav-link{
+    padding: 10px 30px;
+    border-radius: 0;
+    color: #000;
+}
+header .title .row:nth-child(2)>.nav .active{
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    border-bottom: 1px solid red;
+    background-color: red;
+    color: #fff;
+}
+
+
+
+
+
+/* footer */
+footer{
+    margin-top: 100px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #cccccc;
+
+}
+
+
+
+/* 登录module */
+/* 登录头像和名字 */
+.user_head{
+    position: relative;
+    text-align: center;
+    transform: translateY(-5px);
+}
+.user_head i{
+    position: absolute;
+    bottom: -7px;
+    display: inline-block;
+    margin: auto;
+    font-size: 35px;
+
+}
+.user_name>a{
+    font-size: 16px;
+    margin-left: 35px;
+}
+
+
+/* 弹窗登录界面 */
+.login small{
+    display: none;
+}
+.login .modal-footer button:nth-child(3){
+    margin-left: 15px;
+}
+
+/* logo */
+.modal .logo img{
+    width: 100px;
+}
+
+/* 弹窗注册界面 */
+header .register .modal .modal-dialog{
+    width: 500px;
+}
+header .register .modal-footer button:nth-child(1){
+    width: 100px;
+    margin-left: 10px;
+}
+header .register form .form-group:nth-child(4) input{
+    display: inline-block;
+    width: 64%;
+}
+header .register form small{
+    display: none;
+}
+header .register form .form-group:nth-child(4) button{
+    transform: translateY(-3px);
+}

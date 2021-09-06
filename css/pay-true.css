@@ -1,0 +1,23 @@
+/* body */
+.body{
+    margin-top: 40px;
+}
+
+
+.body>.container>.row{
+    margin-top: 30px;
+    padding: 40px 20px;
+    border: 2px solid #ccc;
+}
+.picture{
+    margin: 0 auto;
+}
+.body p,.button{
+    /* width: 100%; */
+    text-align: center;
+}
+
+
+footer{
+    margin-top: 132px;
+}

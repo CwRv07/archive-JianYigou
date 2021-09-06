@@ -1,0 +1,115 @@
+/* body */
+a:hover{
+    color: #000;
+    text-decoration: none;
+}
+/* table */
+.body{
+    margin-top: 20px;
+}
+.body .table th{
+    text-align: center;
+    background-color: #cccccc;
+}
+.body .table td>a{
+    color: #666666;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+.body .table tbody tr:nth-child(2) a,.body .table tbody tr:nth-child(3) a{
+    text-decoration: line-through;
+}
+.body .table tbody tr:nth-child(1) .active,.body .table tbody tr:nth-child(4) .active{
+    color: red;
+    padding: 5px 10px;
+    border: 1px solid red;
+}
+
+/* list */
+/* .body .list{
+    margin-top: 0px;
+} */
+.body .list .title{
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background: #999999 url(../img/new_shopping.png) no-repeat center center ;
+}
+.body .list title img{
+    display: none;
+    /* display: block;
+    height: 100%; */
+}
+.body .list .item{
+    padding: 0;
+}
+.body .list .item .row>div{
+    padding: 0;
+}
+.body .list .item .card{
+    border-radius: 0;
+    position: relative;
+    margin: 5px 5px;
+}
+/* .body .list .item .card img{
+    display: block;
+    width: 100%;
+    height: 150px;   
+} */
+.body .list .item .card .card-body{
+    padding: 15px 10px 5px 10px;
+}
+
+
+
+.body .list .card .card-title{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.body .list .card .card-text{
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.body .list .card .button{
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+    /* opacity: 0; */
+    transition: all 1s;
+}
+/* .body .list .card:hover .button{
+    opacity: 1;
+} */
+.body .list .card .button .card-button>a{
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 550;
+    border-radius: 50%!important;
+    /* border: 1px solid #ccc; */
+    z-index: 5;
+}
+.body .list .card .card-button i::before{
+    transform: translateY(-4px);
+}
+
+.nothing{
+    margin: 50px 0;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.nothing p{
+    width: 100%;
+}

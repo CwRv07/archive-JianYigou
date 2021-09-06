@@ -1,0 +1,57 @@
+/* 登录头像和名字 */
+.user_head{
+    position: relative;
+    text-align: center;
+    transform: translateY(-5px);
+}
+.user_head i{
+    position: absolute;
+    bottom: -7px;
+    display: inline-block;
+    margin: auto;
+    font-size: 35px;
+
+}
+.user_name>a{
+    font-size: 16px;
+    margin-left: 35px;
+}
+
+
+/* 弹窗登录界面 */
+.login small{
+    display: none;
+}
+.login .modal-footer button:nth-child(3){
+    margin-left: 15px;
+}
+
+/* logo */
+.modal .logo img{
+    width: 100px;
+}
+
+/* 弹窗注册界面 */
+header .register .modal .modal-dialog{
+    width: 500px;
+}
+header .register .modal-footer button:nth-child(1){
+    width: 100px;
+    margin-left: 10px;
+}
+header .register form .form-group:nth-child(4) input{
+    display: inline-block;
+    width: 64%;
+}
+header .register form small{
+    display: none;
+}
+header .register form .form-group:nth-child(4) button{
+    transform: translateY(-3px);
+}
+
+
+/* 登录状态初始化 */
+/* header .user_info{
+    display:none;
+} */
